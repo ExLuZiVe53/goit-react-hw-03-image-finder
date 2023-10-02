@@ -19,4 +19,4 @@ const XYChart = props => {
   );
 };
 
-export default MyLoader;
+export default XYChart;
