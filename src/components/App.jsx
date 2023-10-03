@@ -23,7 +23,7 @@ export class App extends Component {
 
   // write Submit function
   handleSabmit = input => {
-    this.setState({ searchImg: input });
+    this.setState({ searchImg: input, page: 1 });
   };
   //Styles with APP
   appStyle = {
