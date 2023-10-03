@@ -42,10 +42,9 @@ export class App extends Component {
       this.state.searchImg === nextState.searchImg &&
       this.state.page === nextState.page
     ) {
-      return 
-
+      return;
     }
-   
+
     // перевірка на новий пошук в інпуті
     if (this.state.searchImg !== nextState.searchImg) {
       this.setState({
@@ -68,7 +67,7 @@ export class App extends Component {
       }
       // додаю у стан масив даних для  для галереї
       console.log(images.hits);
-      
+
       this.setState(
         prevImages => ({
           searchAr: [
@@ -109,7 +108,6 @@ export class App extends Component {
     }
   }
 
-
   //новий запит по кліку на LoadMore
   newFetchImages = () => {
     this.setState({
@@ -118,6 +116,7 @@ export class App extends Component {
   };
 
   render() {
+    // Деструкторизуємо значення в стейті
     const { isLoading, searchAr, isShow, error } = this.state;
 
     return (
