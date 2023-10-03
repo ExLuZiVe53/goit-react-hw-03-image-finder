@@ -8,9 +8,8 @@ import { ImageGallery } from './ImageGallery/ImageGallery.jsx';
 import { SearchBar } from './SearchBar/Searchbar.jsx';
 import { ErMessage } from './SearchBar/ErMessage.jsx';
 
-// import { fetchPictures } from "./Api/fetchPictures.js";
 export class App extends Component {
-  // Переривач запитів
+  // Stay abortControl
   abortCtrl;
   // Стан
   state = {
@@ -22,11 +21,11 @@ export class App extends Component {
     isShow: false,
   };
 
-  // Сабміт форми
+  // write Submit function
   handleSabmit = input => {
     this.setState({ searchImg: input });
   };
-  //стилі для App
+  //Styles with APP
   appStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -65,7 +64,7 @@ export class App extends Component {
       if (images.totalhits) {
         Notify.info(`Hooray! We found ${images.totalHits} images.`);
       }
-      // додаю у стан масив даних для  для галереї
+      // додаю у стан масив даних для галереї
       console.log(images.hits);
 
       this.setState(

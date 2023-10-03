@@ -10,7 +10,6 @@ import {
 
 import { FcSearch } from 'react-icons/fc';
 
-
 export class SearchBar extends Component {
   //стан
   state = {
@@ -22,11 +21,9 @@ export class SearchBar extends Component {
     this.setState({ [target.name]: target.value.trim() });
   };
   // Submit form
-  submit = e => {
-    e.preventDefault();
+  submit = event => {
+    event.preventDefault();
     this.props.handleSabmit(this.state.searchImg);
-   
-      
   };
 
   initialValues = { searchimg: '' };
@@ -36,7 +33,7 @@ export class SearchBar extends Component {
         <Formik initialValues={this.initialValues}>
           <SearchForm onSubmit={this.submit} className="form">
             <BTNSubmit type="submit" className="button">
-              <FcSearch value={{ size: '1.5em' }} />
+              <FcSearch value={{ size: '1.4em' }} />
               <ButtonLabel className="button-label">Search</ButtonLabel>
             </BTNSubmit>
 
